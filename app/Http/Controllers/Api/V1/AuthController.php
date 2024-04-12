@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Requests\ApiV1\PasswordLoginRequest;
-use App\Services\Users\Interfaces\UserServiceInterface;
-use App\Services\Users\UserService;
+use App\Services\User\Interfaces\UserServiceInterface;
+use App\Services\User\UserService;
 use Illuminate\Http\JsonResponse;
 
 class AuthController extends BaseController

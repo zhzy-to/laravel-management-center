@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Services\Users\Providers;
+namespace App\Services\User\Providers;
 
-use App\Services\Users\Interfaces\UserServiceInterface;
-use App\Services\Users\UserService;
+use App\Services\User\Interfaces\UserServiceInterface;
+use App\Services\User\UserService;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Support\ServiceProvider;
 

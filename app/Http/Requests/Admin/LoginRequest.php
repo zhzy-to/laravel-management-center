@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Requests\ApiV1;
+namespace App\Http\Requests\Admin;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 
-class PasswordLoginRequest extends BaseRequest
+class LoginRequest extends BaseRequest
 {
-
     /**
      * Get the validation rules that apply to the request.
      *

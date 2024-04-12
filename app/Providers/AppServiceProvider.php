@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Services\Users\Providers\UserServiceProvider;
+use App\Services\User\Providers\UserServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

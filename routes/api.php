@@ -30,4 +30,4 @@ Route::group([
 
 Route::get('/user', function (Request $request) {
     return $request->user();
-})->middleware(\App\Http\Middleware\VerifyJWTToken::class);
+})->middleware('jwt');

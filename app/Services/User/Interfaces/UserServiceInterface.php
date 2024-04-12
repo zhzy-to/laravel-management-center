@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Users\Interfaces;
+namespace App\Services\User\Interfaces;
 
 interface UserServiceInterface
 {

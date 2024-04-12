@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Services\Users;
+namespace App\Services\User;
 
 use App\Models\User;
-use App\Services\Users\Interfaces\UserServiceInterface;
+use App\Services\User\Interfaces\UserServiceInterface;
 use Illuminate\Support\Facades\Hash;
 
 class UserService implements Interfaces\UserServiceInterface
