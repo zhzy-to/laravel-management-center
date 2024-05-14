@@ -15,7 +15,8 @@ Route::prefix('admin-api')
             'admin.permission',
         ])->group(function () {
 
-            Route::get('user/roles', [Controller\UserController::class, 'getUserRoles']);
+            Route::get('user/roles', [Controller\UserController::class, 'getUserRoles'])->name('roles');
+
 
         });
 

@@ -11,10 +11,18 @@ use Illuminate\Http\Request;
 
 class AdminPermission
 {
+    /**
+     * @param Request $request
+     * @param Closure $next
+     * @return mixed
+     * @throws AuthException
+     * @throws \App\Exceptions\Admin\ServeException
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
     public function handle(Request $request, Closure $next)
     {
         if (! $id = auth('admin')->id()) {
-            throw new AuthException('Token is illegal', ErrorCodeEnum::Token_expired);
+            throw new AuthException('Token is illegal .', ErrorCodeEnum::TokenExpired);
         }
 
         /**
@@ -26,9 +34,14 @@ class AdminPermission
 
             $permission = $adminService->getUserPermissionByID($id);
 
-            dd($permission);
-        }
+            // 通过路由名称作为权限code
+            // system:add
+            $routeName = $request->route()->getName();
 
+            if (! in_array($routeName, $permission, true)) {
+                throw new AuthException('Forbidden .', ErrorCodeEnum::Forbidden);
+            }
+        }
 
         return $next($request);
     }

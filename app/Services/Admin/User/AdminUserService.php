@@ -57,7 +57,7 @@ class AdminUserService implements AdminUserServiceInterface
 
         $menus = $user->roles()
             ->with('menus', function ($query) {
-                $query->where('type', MenuTypeEnum::Button);
+                // $query->where('type', MenuTypeEnum::Button);
             })
             ->get()
             ->pluck('menus')

@@ -4,5 +4,7 @@ namespace App\Enums;
 
 enum ErrorCodeEnum: int
 {
-    case Token_expired = 401;
+    case TokenExpired = 401;
+
+    case Forbidden = 403;
 }
